@@ -234,12 +234,11 @@ public class Util {
         }
     }
 
-    public static String getScreenshot(String imagename) throws IOException, IOException {
+    public static void getScreenshot(String imagename) throws IOException, IOException {
         TakesScreenshot ts = (TakesScreenshot) AppDriver.getCurrentDriver();
         File f = ts.getScreenshotAs(OutputType.FILE);
         String filePath = "./screenshot/"+imagename+".jpg";
         FileUtils.copyFile(f, new File(filePath));
-        return filePath;
     }
 
     public static String convertImg_Base64(String screenshotPath) throws IOException {

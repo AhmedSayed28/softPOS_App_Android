@@ -64,7 +64,7 @@ public class BasePage {
     protected String getText(By byLocator){
         String str = "";
         if (AppDriver.getCurrentDriver() instanceof AndroidDriver) {
-            str = getEl(byLocator).getText();
+            str = waitForEl(byLocator).getText();
         } else if (AppDriver.getCurrentDriver() instanceof IOSDriver) {
             str =  getAttribute(byLocator, "value");
         }
