@@ -12,8 +12,8 @@ public class AppiumServer {
     private static void setInstance(){
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         builder
-                .withAppiumJS(new File("C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-                .usingDriverExecutable(new File("/Program Files/nodejs/node"))
+                .withAppiumJS(new File("C:\\Users\\tahae\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\npm.cmd"))
                 .usingPort(4723)
                 .withArgument(GeneralServerFlag.LOCAL_TIMEZONE)
                 .withLogFile(new File("AppiumLog.txt"))

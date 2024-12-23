@@ -19,7 +19,7 @@ public class AppFactory {
         capabilities.setCapability("platformName", "Android"); // Mobile platform
         capabilities.setCapability("appium:automationName", "UiAutomator2"); // Automation framework
         capabilities.setCapability("appium:deviceName", "samsung SM-A225F"); // Device name from adb devices
-        capabilities.setCapability("appium:app", "C:\\Users\\user\\IdeaProjects\\softPOS_App_Android\\apps\\Finpay-V3.0.5.apk"); // Path to the app's APK
+        capabilities.setCapability("appium:app", "E:\\SoftPos Proj\\apps\\Finpay-V3.0.5.apk"); // Path to the app's APK
         capabilities.setCapability("appium:noReset", true); // Avoids resetting the app state between sessions
 //        capabilities.setCapability("appium:newCommandTimeout", 300); // Optional: Sets command timeout
 

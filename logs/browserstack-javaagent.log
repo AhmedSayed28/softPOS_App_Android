@@ -539,3 +539,423 @@
 14:49:54.269 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
 14:49:54.284 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23.0.1","appiumVersion":"null","frameworkDetectionInstrumentation":{},"isPercyAutoEnabled":false,"language":"java","sdkRunId":"36aeb0c8-c1a9-48ce-bf0a-2536f9308213","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","detectedDependencies":"","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"referrer":"unknown","hostname":"DESKTOP-UIV3E49","locationTrigger":"onFinish","language_framework":"unknown","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionStatus":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"seleniumVersion":"null","percyBuildId":null}}
 14:49:54.962 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+22:08:40.276 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+22:08:40.699 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+22:08:40.796 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+22:08:40.796 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+22:08:40.845 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+22:08:40.855 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"e63166b5-abbb-4fa4-b57f-a1cba4d89204","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+22:08:42.201 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+08:05:07.913 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+08:05:08.324 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+08:05:08.422 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+08:05:08.422 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+08:05:08.479 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+08:05:08.490 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"d9fa36f0-64a4-43de-8db9-5ddbef39b95d","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionStatus":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+08:05:10.137 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+09:00:27.187 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+09:00:27.564 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+09:00:27.684 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+09:00:27.685 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+09:00:27.738 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+09:00:27.748 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"e7158578-bd3d-4c29-9770-f4e0fef6cb56","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"serenityOverridePlugin":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+09:00:28.857 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:00:20.837 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:00:21.178 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:00:21.268 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:00:21.268 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:00:21.318 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:00:21.333 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"c2eaa4ee-7f91-4d5e-ab2a-759e4d54ac97","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:00:22.307 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:07:23.276 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:07:23.597 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:07:23.673 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:07:23.673 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:07:23.717 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:07:23.726 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"cdc92d58-5577-41d2-8799-6d9bcd61bf33","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:07:24.751 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:09:40.471 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:09:40.879 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:09:40.971 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:09:40.971 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:09:41.032 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:09:41.045 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"c567d9bc-2143-4d71-a203-1973af4e4453","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionStatus":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:09:42.335 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:11:52.318 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:11:52.652 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:11:52.721 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:11:52.722 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:11:52.769 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:11:52.776 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"761ddc26-8232-4cfb-bf9a-b3828dc5e58c","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionStatus":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:11:53.995 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:24:05.927 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:24:06.279 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:24:06.349 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:24:06.349 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:24:06.396 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:24:06.405 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"caaef3b2-6f37-4f27-9541-385d282ab633","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"serenityOverridePlugin":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:24:07.726 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:25:48.011 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:25:48.363 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:25:48.459 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:25:48.459 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:25:48.539 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:25:48.553 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"015248f8-5716-4e8e-8530-273713451b5d","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:25:49.828 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+10:57:39.981 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+10:57:40.350 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+10:57:40.425 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+10:57:40.425 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+10:57:40.490 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+10:57:40.498 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"b1f7950d-81da-4944-a49b-2baf82698aae","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+10:57:41.783 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+11:01:01.443 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+11:01:01.795 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+11:01:01.872 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+11:01:01.874 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+11:01:01.926 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+11:01:01.936 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"f73e5f8c-0584-4f04-a4ab-d2baaabdbe6e","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+11:01:02.935 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+11:07:09.106 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+11:07:56.422 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+11:07:56.491 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+11:07:56.491 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+11:07:56.538 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+11:07:56.547 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"b6e304d4-9f0b-4e40-95b5-8c9af272812e","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionStatus":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+11:07:57.607 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+11:13:23.671 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+11:13:24.003 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+11:13:24.072 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+11:13:24.072 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+11:13:24.119 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+11:13:24.128 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"550432d2-ae2d-4b8d-ad76-c6babdd33c07","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+11:13:25.156 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
+11:13:37.887 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+11:14:16.796 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+11:14:16.847 [main] DEBUG c.b.utils.FunnelInstrumentation - Unable to parse data from processes. Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.getFormattedDataFromProcesses(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:873)
+	at org.testng.TestRunner.afterRun(TestRunner.java:828)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+11:14:16.847 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TestObservability
+11:14:16.880 [main] TRACE c.b.t.TestOrchestrationUtils - getInstrumentationData: invoked
+11:14:16.890 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":null,"userName":null,"event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"538be142-d723-4cc0-9eb7-dcb73513e21d","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":false,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"Taha","productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"MANUAL","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"23","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"4.27.0","seleniumVersion":"null"}}
+11:14:17.921 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"Unauthorized"}
