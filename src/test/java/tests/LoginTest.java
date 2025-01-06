@@ -6,13 +6,19 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.OnboardingPage;
 
 
 public class LoginTest extends BaseTest {
     LoginPage loginPage;
+    OnboardingPage onboardingPage;
     @BeforeClass
     public void setup(){
          loginPage = new LoginPage();
+         onboardingPage = new OnboardingPage();
+         if (onboardingPage.isFirstTime()){
+             onboardingPage.skipOnboardingScreen();
+         }
     }
 
     @Test(priority = 1)
@@ -40,6 +46,7 @@ public class LoginTest extends BaseTest {
         loginPage.login("ahm.say14@gmail.com", "New1234@");
         Assert.assertFalse(loginPage.isLoginLogoDisplayed());
         Assert.assertFalse(loginPage.isErrorDisplayed());
+        loginPage.acceptLocationForOncTime();
     }
 
 

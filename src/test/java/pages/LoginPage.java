@@ -18,6 +18,7 @@ public class LoginPage extends BasePage {
     private By okBtn;
     private By loginLogo;
     private By errorView;
+    private By acceptLocationBtn;
 
     public LoginPage() {
         if (AppDriver.getCurrentDriver() instanceof AndroidDriver) {
@@ -27,6 +28,7 @@ public class LoginPage extends BasePage {
             credErrorText = By.xpath("//android.widget.TextView[@text=\"Email or password not correct\"]");
             loginLogo = By.xpath("//android.view.View[@content-desc=\"login_icon\"]");
             errorView = By.xpath("//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View");
+            acceptLocationBtn = By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_one_time_button\"]");
         } else if (AppDriver.getCurrentDriver() instanceof IOSDriver) {
             emailLocator = AppiumBy.accessibilityId("email input field");
             emailErrorText = By.xpath("//XCUIElementTypeOther[@name='email-error-message']/XCUIElementTypeStaticText");
@@ -71,6 +73,11 @@ public class LoginPage extends BasePage {
     }public boolean isErrorDisplayed(){
         return elIsDisplayed(errorView);
     }
+
+    public void acceptLocationForOncTime(){
+        waitNclick(acceptLocationBtn);
+    }
+
 
 
 }
