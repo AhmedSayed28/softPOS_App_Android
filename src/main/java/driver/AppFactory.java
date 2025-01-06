@@ -19,11 +19,19 @@ public class AppFactory {
         capabilities.setCapability("platformName", "Android"); // Mobile platform
         capabilities.setCapability("appium:automationName", "UiAutomator2"); // Automation framework
         capabilities.setCapability("appium:deviceName", "samsung SM-A225F"); // Device name from adb devices
-        capabilities.setCapability("appium:app", "C:\\Users\\user\\IdeaProjects\\softPOS_App_Android\\apps\\Finpay-V3.0.5.apk"); // Path to the app's APK
+        capabilities.setCapability("appium:app", "C:\\Users\\user\\IdeaProjects\\softPOS_App_Android\\apps\\app-withoutSSL-release.apk"); // Path to the app's APK
+        capabilities.setCapability("appPackage","net.sbs.softpos.finpay");
         capabilities.setCapability("appium:noReset", true); // Avoids resetting the app state between sessions
 //        capabilities.setCapability("appium:newCommandTimeout", 300); // Optional: Sets command timeout
 
         UiAutomator2Options options = new UiAutomator2Options();
+        options.setPlatformName("Android"); // Mobile platform
+        options.setAutomationName("UiAutomator2"); // Automation framework
+        options.setDeviceName("samsung SM-A225F"); // Device name
+        options.setApp("C:\\Users\\user\\IdeaProjects\\softPOS_App_Android\\apps\\app-withoutSSL-release.apk"); // Path to the APK
+        options.setAppPackage("net.sbs.softpos.finpay"); // App package
+        options.setNoReset(true); // Avoid resetting app state
+
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 
         AppDriver.setDriver(driver);
