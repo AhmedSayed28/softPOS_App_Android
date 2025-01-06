@@ -15,37 +15,31 @@ public class LoginTest extends BaseTest {
          loginPage = new LoginPage();
     }
 
-    @Test
-    public void validLoginTest(){
-            loginPage.login("himilof721@eoilup.com", "New1234@");
-    }
-
-    @Test
+    @Test(priority = 1)
     public void invalidLogin_emptyUserNameTest(){
         loginPage.login("", "10203040");
         Assert.assertEquals(loginPage.getEmailErrorText(), "Required");
     }
 
-    @Test
+    @Test(priority = 2)
     public void invalidLogin_emptyPasswordTest(){
         loginPage.login("bob@example.com", "");
         Assert.assertEquals(loginPage.getPasswordErrorText(), "Required");
     }
 
-    @Test(dataProvider = "invalid-login-dataProvider")
-    public void invalidLogin_Test(String uName, String password, String errorText){
-        loginPage.login(uName, password);
-        Assert.assertEquals(loginPage.getCredErrorText(), errorText);
+    @Test(priority = 3)
+    public void invalidLogin_InvalidCredTest(){
+        loginPage.login("bob@example.com", "New1234@");
+        Assert.assertEquals(loginPage.getCredErrorText(), "Email or password not correct");
         loginPage.clickOk();
     }
 
-    @DataProvider(name = "invalid-login-dataProvider")
-    public Object[][] dataProviderArr() {
 
-        Object object[][] = { { "bob@example.com", "10203040" ,"Email or password not correct"},
-                              { "bob@example.com", "10203040", "Email or password not correct" },
-        };
-        return object;
+    @Test(priority = 4)
+    public void validLoginTest(){
+        loginPage.login("ahm.say14@gmail.com", "New1234@");
+        Assert.assertFalse(loginPage.isLoginLogoDisplayed());
+        Assert.assertFalse(loginPage.isErrorDisplayed());
     }
 
 
