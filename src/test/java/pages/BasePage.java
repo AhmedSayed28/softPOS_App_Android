@@ -31,6 +31,11 @@ public class BasePage {
         return AppDriver.getCurrentDriver().findElement(byLocator);
     }
 
+    protected boolean elIsDisplayed(By byLocator){
+        List<WebElement> elements = AppDriver.getCurrentDriver().findElements(byLocator);
+        return !elements.isEmpty();
+    }
+
     protected List<WebElement> getEls(By byLocator){
         return AppDriver.getCurrentDriver().findElements(byLocator);
     }

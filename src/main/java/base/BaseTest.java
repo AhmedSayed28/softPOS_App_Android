@@ -1,22 +1,22 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import driver.AppFactory;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+@Listeners(ExtentReportManager.class)
 public class BaseTest {
 
+    private ExtentSparkReporter spark;
+    private ExtentReports extent;
     @BeforeClass
     public void launchApp() throws MalformedURLException {
-        AppiumServer.start();
-        System.out.println("before method");
-        AppFactory.launchApp();
+        System.out.println("Before Class");
     }
 
     @AfterMethod
@@ -27,12 +27,15 @@ public class BaseTest {
     }
 
     @BeforeSuite
-    public void serverStart(){
-        System.out.println("before suite");
+    public void serverStartAndReportSetup() throws MalformedURLException {
+        AppiumServer.start();
+        AppFactory.launchApp();
+
     }
 
     @AfterSuite
     public void serverStop(){
 //        AppiumServer.stop();
+        extent.flush();
     }
 }
