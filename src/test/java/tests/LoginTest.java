@@ -10,6 +10,8 @@ import pages.OnboardingPage;
 
 
 public class LoginTest extends BaseTest {
+    private static final String EMAIL = "memof55627@nalwan.com";
+    private static final String PASSWORD = "New1234@";
     LoginPage loginPage;
     OnboardingPage onboardingPage;
     @BeforeClass
@@ -43,7 +45,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 4)
     public void validLoginTest(){
-        loginPage.login("ahm.say14@gmail.com", "New1234@");
+        loginPage.login(EMAIL, PASSWORD);
         Assert.assertFalse(loginPage.isLoginLogoDisplayed());
         Assert.assertFalse(loginPage.isErrorDisplayed());
 //        loginPage.acceptLocationForOncTime();

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/user/IdeaProjects/softPOS_App_Android/src/test/java/tests">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="validLoginTest"/>
+                </methods>
+            </class>
+            <class name="tests.AuthorizePaymentTest">
+                <methods>
+                    <include name="testAuthorizePayment"/>
+                    <include name="testAuthorizePaymentAndCancel"/>
+                    <include name="testAuthorizePaymentAndExtend"/>
+                    <include name="testAuthorizePaymentAndFullCapture"/>
+                    <include name="testAuthorizePaymentAndPartialCapture"/>
+                </methods>
+            </class>
+            <class name="tests.CashBackTest">
+                <methods>
+                    <include name="testCashBack"/>
+                    <include name="testCashBackAndCancel"/>
+                    <include name="testCashBackAndRefund"/>
+                    <include name="testCashBackAndCancelRefund"/>
+                </methods>
+            </class>
+
+
+            <class name="tests.NormalPaymentTest">
+                <methods>
+                    <include name="testPurchaseAndRefund"/>
+                    <include name="testRefundAndCancelRefund"/>
+                    <include name="testPurchaseAndCancel"/>
+                    <include name="returnMain"/>
+                </methods>
+            </class>
+            <class name="tests.SplitPaymentTest">
+                <methods>
+                    <include name="testSplitPayment"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

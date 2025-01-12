@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/user/IdeaProjects/softPOS_App_Android/src/test/java/tests/TerminalRegistrationTest.java">
+        <classes>
+            <class name="tests.TerminalRegistrationTest">
+                <methods>
+                    <include name="handleOTP"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

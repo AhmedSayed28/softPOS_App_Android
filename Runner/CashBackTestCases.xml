@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/user/IdeaProjects/softPOS_App_Android/src/test/java/tests/CashBackTest.java"><classes><class name="tests.CashBackTest"><methods><include name="testCashBack"/><include name="testCashBackAndRefund"/><include name="testCashBackAndCancelRefund"/><include name="testCashBackAndCancel"/></methods></class></classes></test></suite>
