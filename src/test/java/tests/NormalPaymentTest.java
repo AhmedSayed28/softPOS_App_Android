@@ -26,11 +26,12 @@ public class NormalPaymentTest extends BaseTest {
         receiptPage = new ReceiptPage();
 
         handleOnboarding();
-        loginPage.login(EMAIL, PASSWORD);
+//        loginPage.login(EMAIL, PASSWORD);
     }
 
     @Test
     public void testPurchaseAndRefund() {
+        mainPage.goToMainPage();
         performNormalPayment();
         receiptPage.showReceipt();
         refundPayment();
@@ -39,6 +40,7 @@ public class NormalPaymentTest extends BaseTest {
 
     @Test
     public void testRefundAndCancelRefund() {
+        mainPage.goToMainPage();
         performNormalPayment();
         receiptPage.showReceipt();
         refundPayment();
@@ -47,12 +49,19 @@ public class NormalPaymentTest extends BaseTest {
         receiptPage.returnToMainPage();
     }
 
+
     @Test
     public void testPurchaseAndCancel() {
+        mainPage.goToMainPage();
         performNormalPayment();
         receiptPage.showReceipt();
         cancelRefund();
         receiptPage.returnToMainPage();
+    }
+
+    @Test
+    public void returnMain() {
+        mainPage.goToMainPage();
     }
 
     // Helper Methods
