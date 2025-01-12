@@ -1,6 +1,8 @@
 package tests;
 
 import base.BaseTest;
+import base.ExtentReportManager;
+import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -38,6 +40,9 @@ public class LoginTest extends BaseTest {
         loginPage.login("bob@example.com", "New1234@");
         Assert.assertEquals(loginPage.getCredErrorText(), "Email or password not correct");
         loginPage.clickOk();
+
+
+
     }
 
 
