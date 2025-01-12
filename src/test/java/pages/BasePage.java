@@ -48,10 +48,10 @@ public class BasePage {
         getEl(byLocator).sendKeys(text);
     }
 
-    protected void waitNtype(By byLocator, String text){
+    protected void waitNclearNtype(By byLocator, String text){
         waitForEl(byLocator);
         getEl(byLocator).clear();
-                getEl(byLocator).sendKeys(text);
+        getEl(byLocator).sendKeys(text);
     }
 
     protected void waitNclick(By byLocator){

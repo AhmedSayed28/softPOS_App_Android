@@ -43,10 +43,10 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 4)
     public void validLoginTest(){
-        loginPage.login("ahm.say14@gmail.com", "New2234@");
+        loginPage.login("ahm.say14@gmail.com", "New1234@");
         Assert.assertFalse(loginPage.isLoginLogoDisplayed());
         Assert.assertFalse(loginPage.isErrorDisplayed());
-        loginPage.acceptLocationForOncTime();
+//        loginPage.acceptLocationForOncTime();
     }
 
 

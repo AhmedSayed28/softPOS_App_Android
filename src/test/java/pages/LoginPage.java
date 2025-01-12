@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends BasePage {
 
     private By emailLocator;
+    private By passwordLocator;
+    private By loginBtn;
     private By emailErrorText;
     private By passwordErrorText;
     public By credErrorText;
@@ -23,6 +25,8 @@ public class LoginPage extends BasePage {
     public LoginPage() {
         if (AppDriver.getCurrentDriver() instanceof AndroidDriver) {
             emailLocator = By.xpath("//android.widget.ScrollView/android.view.View[3]/android.widget.EditText");
+            passwordLocator = By.xpath("//android.widget.ScrollView/android.view.View[4]/android.widget.EditText");
+            loginBtn = By.xpath("//android.widget.ScrollView/android.view.View[5]/android.widget.Button");
             emailErrorText = By.xpath("(//android.widget.TextView[@text=\"Required\"])[1]");
             passwordErrorText = By.xpath("(//android.widget.TextView[@text=\"Required\"])[1]");
             credErrorText = By.xpath("//android.widget.TextView[@text=\"Email or password not correct\"]");
@@ -35,20 +39,14 @@ public class LoginPage extends BasePage {
             passwordErrorText = By.xpath("//XCUIElementTypeOther[@name='generic-error-message']/XCUIElementTypeStaticText");
         }
     }
-    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.View[4]/android.widget.EditText")
-    @iOSXCUITFindBy(accessibility = "Password input field")
-    private WebElement passwordElement;
 
-    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.View[5]/android.widget.Button")
-    @iOSXCUITFindBy(accessibility = "Login button")
-    private WebElement btnLogin;
+    // pass => //android.widget.ScrollView/android.view.View[4]/android.widget.EditText
+    // loginbtn => //android.widget.ScrollView/android.view.View[5]/android.widget.Button
 
     public void login(String email, String password) {
-
-        waitNtype(emailLocator, email);
-        passwordElement.clear();
-        passwordElement.sendKeys(password);
-        btnLogin.click();
+        waitNclearNtype(emailLocator, email);
+        waitNclearNtype(passwordLocator, password);
+        waitNclick(loginBtn);
     }
 
     public void clickOk(){

@@ -36,6 +36,6 @@ public class BaseTest {
     @AfterSuite
     public void serverStop(){
 //        AppiumServer.stop();
-        extent.flush();
+//        extent.flush();
     }
 }
