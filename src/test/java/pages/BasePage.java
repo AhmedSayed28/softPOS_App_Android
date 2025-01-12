@@ -27,6 +27,10 @@ public class BasePage {
        return wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
     }
 
+    protected void waitForElToBeEnable(By byLocator){
+        wait.until(ExpectedConditions.elementToBeClickable(byLocator));
+    }
+
     protected WebElement getEl(By byLocator){
         return AppDriver.getCurrentDriver().findElement(byLocator);
     }

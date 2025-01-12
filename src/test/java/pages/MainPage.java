@@ -53,5 +53,8 @@ public class MainPage extends BasePage{
         }
         waitNclick(continueBtn);
     }
+    public void waitUntilCardPasswordPageLoading(){
+        waitForElToBeEnable(By.xpath("//android.widget.TextView[@text=\"1\"]"));
+    }
 
 }
