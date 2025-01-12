@@ -5,36 +5,57 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class SplitPaymentTest extends BaseTest {
-
+public class CashBackTest extends BaseTest {
     private static final String AMOUNT = "1234";
-    private static final String GROUPNUMBER = "3";
+    private static final String CASHBACKAMOUNT = "100";
 
-
+    private CashBackPage cashBackPage;
     private LoginPage loginPage;
     private OnboardingPage onboardingPage;
     private MainPage mainPage;
     private ReceiptPage receiptPage;
-    private SplitPaymentPage splitPaymentPage;
+
     @BeforeClass
     public void setup() {
         loginPage = new LoginPage();
         onboardingPage = new OnboardingPage();
         mainPage = new MainPage();
         receiptPage = new ReceiptPage();
-        splitPaymentPage = new SplitPaymentPage();
+        cashBackPage = new CashBackPage();
 
         handleOnboarding();
 //        loginPage.login(EMAIL, PASSWORD);
     }
-
     @Test
-    public void testSplitPayment() {
-        mainPage.goToMainPage();
-        splitPaymentPage.clickSplitPayment();
-        splitPaymentPage.makeSplitPayment(AMOUNT, GROUPNUMBER);
+    public void testCashBack() {
+        performCashBack();
     }
 
+    @Test
+    public void testCashBackAndRefund() {
+        performCashBack();
+        receiptPage.showReceipt();
+        refundPayment();
+        receiptPage.returnToMainPage();
+    }
+
+    @Test
+    public void testCashBackAndCancelRefund() {
+        performCashBack();
+        receiptPage.showReceipt();
+        refundPayment();
+        receiptPage.showReceipt();
+        cancelRefund();
+        receiptPage.returnToMainPage();
+    }
+
+    @Test
+    public void testCashBackAndCancel() {
+        performCashBack();
+        receiptPage.showReceipt();
+        cancelRefund();
+        receiptPage.returnToMainPage();
+    }
 
     // Helper Methods
     private void handleOnboarding() {
@@ -43,9 +64,10 @@ public class SplitPaymentTest extends BaseTest {
         }
     }
 
-    private void performNormalPayment() {
-        mainPage.clickNewPayment();
-        mainPage.makeNormalPayment(AMOUNT);
+    private void performCashBack() {
+        mainPage.goToMainPage();
+        cashBackPage.clickCashBack();
+        cashBackPage.makeCashBack(AMOUNT, CASHBACKAMOUNT);
         mainPage.waitUntilCardPasswordPageLoading();
         mainPage.enterCardPassword();
         receiptPage.waitForOperationStatusPage();

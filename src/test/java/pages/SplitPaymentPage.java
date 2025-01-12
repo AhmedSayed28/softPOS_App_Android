@@ -13,6 +13,8 @@ public class SplitPaymentPage extends BasePage{
     private By continueBtn;
     private By payBtn;
 
+    MainPage mainPage = new MainPage();
+
     public SplitPaymentPage() {
         if (AppDriver.getCurrentDriver() instanceof AndroidDriver) {
             splitPaymentBtn = By.xpath("//android.widget.TextView[@text=\"New Split Payment\"]");
@@ -30,7 +32,15 @@ public class SplitPaymentPage extends BasePage{
     public void makeSplitPayment(String amount, String groupNumber){
         waitNclearNtype(splitPayAmountInput, amount);
         waitNclearNtype(splitPayGroupNumberInput, groupNumber);
-        waitNclick(payBtn);
+        waitNclick(continueBtn);
+
+        System.out.println(Integer.parseInt(groupNumber));
+        for (int i = 1; i <= Integer.parseInt(groupNumber); i++) {
+            waitNclick(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View["+i+"]/android.view.View/android.widget.Button"));
+            mainPage.waitUntilCardPasswordPageLoading();
+            mainPage.enterCardPassword();
+        }
     }
+
 
 }

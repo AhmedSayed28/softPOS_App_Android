@@ -55,6 +55,7 @@ public class MainPage extends BasePage{
     }
     public void waitUntilCardPasswordPageLoading(){
         waitForElToBeEnable(By.xpath("//android.widget.TextView[@text=\"1\"]"));
+        waitForElToBeEnable(By.xpath("//android.widget.TextView[@text=\"2\"]"));
     }
     public void goToMainPage(){
         while (!elIsDisplayed(By.xpath("//android.widget.TextView[@text=\"Payment Types\"]"))){
