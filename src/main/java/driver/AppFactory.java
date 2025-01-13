@@ -14,15 +14,6 @@ public class AppFactory {
     static AppiumDriver driver;
 
     private static void android_launchApp() throws MalformedURLException {
-        // Set desired capabilities
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "Android"); // Mobile platform
-        capabilities.setCapability("appium:automationName", "UiAutomator2"); // Automation framework
-        capabilities.setCapability("appium:deviceName", "samsung SM-A225F"); // Device name from adb devices
-        capabilities.setCapability("appium:app", "C:\\Users\\user\\IdeaProjects\\softPOS_App_Android\\apps\\app-withoutSSL-release.apk"); // Path to the app's APK
-        capabilities.setCapability("appPackage","net.sbs.softpos.finpay");
-        capabilities.setCapability("appium:noReset", true); // Avoids resetting the app state between sessions
-//        capabilities.setCapability("appium:newCommandTimeout", 300); // Optional: Sets command timeout
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName("Android"); // Mobile platform

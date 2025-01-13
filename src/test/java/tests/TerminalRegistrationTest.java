@@ -6,6 +6,9 @@ import org.testng.annotations.Test;
 import pages.*;
 
 public class TerminalRegistrationTest extends BaseTest {
+    private static final String EMAIL = "enter email";
+    private static final String PASSWORD = "enter password";
+
     LoginPage loginPage;
     OnboardingPage onboardingPage;
     MainPage mainPage;
@@ -21,7 +24,7 @@ public class TerminalRegistrationTest extends BaseTest {
         if (onboardingPage.isFirstTime()){
             onboardingPage.skipOnboardingScreen();
         }
-        loginPage.login("wocen96075@nalwan.com", "New1234@");
+        loginPage.login(EMAIL, PASSWORD);
     }
 
     @Test(priority = 1)
